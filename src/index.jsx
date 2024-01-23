@@ -9,10 +9,15 @@ import "./_index.scss";
 import GlobalStyle from './utils/styles/GlobalStyle';
 import User from './Pages/User';
 
+//REDUX
+import { Provider } from 'react-redux';
+import store from './utils/styles/store';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <Provider store={store}>
   <React.StrictMode>
     <Router>
       <GlobalStyle/>
@@ -25,4 +30,5 @@ root.render(
       <Footer />
     </Router>
   </React.StrictMode>
+  </Provider>
 )
